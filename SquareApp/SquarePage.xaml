@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:code="clr-namespace:SquareApp.Code;assembly=SquareApp"
+             xmlns:converters="clr-namespace:SquareApp.Converters;assembly=SquareApp"
+             Title="{Binding Title}"
+             mc:Ignorable="d"
+             x:Class="SquareApp.SquarePage">
+    <ContentPage.Resources>
+        <converters:DoubleConverter x:Key="DoubleConverter" />
+    </ContentPage.Resources>
+     <ScrollView>
+        <StackLayout Margin="15">
+            <!--#region Квадратный метр (км2)   -->
+            <Label Text="{code:TranslateExtension SquareMsLabel }"/>
+            <Entry 
+                ReturnCommandParameter="MsValue"
+                Focused="OnButtonFocused"
+                
+                Keyboard="Numeric" 
+                Text="{Binding MsValue , Converter={StaticResource DoubleConverter}}"/>
+            <!--#endregion-->
+            <!--#region  Квадратный километр (км2)  -->
+            <Label 
+                   Text="{code:TranslateExtension SquareKmsLabel }"/>
+            <Entry 
+                ReturnCommandParameter="KmValue"
+                
+                
+                Keyboard="Numeric" 
+                Focused="OnButtonFocused"
+                Text="{Binding KmValue , Converter={StaticResource DoubleConverter}}"/>
+            <!--#endregion-->
+            <!--#region Ар «соток» (а)  -->
+            <Label 
+                   Text="{code:TranslateExtension SquareArLabel }" />
+            <Entry 
+                ReturnCommandParameter="ArValue"
+                
+                
+                Keyboard="Numeric" 
+                Focused="OnButtonFocused"
+                Text="{Binding ArValue , Converter={StaticResource DoubleConverter}}"/>
+            <!--#endregion-->
+            <!--#region Гектар (га)   -->
+            <Label 
+                   Text="{code:TranslateExtension SquareGaLabel } "/>
+            <Entry 
+                ReturnCommandParameter="GaValue"
+                
+                
+                Keyboard="Numeric" 
+                Focused="OnButtonFocused"
+                Text="{Binding GaValue , Converter={StaticResource DoubleConverter}}"/>
+            <!--#endregion-->
+            <!--#region Акр  -->
+            <Label 
+                   Text="{code:TranslateExtension SquareAcrLabel } "/>
+            <Entry 
+                ReturnCommandParameter="AcrValue"
+                
+                
+                Keyboard="Numeric" 
+                Focused="OnButtonFocused"
+                Text="{Binding AcrValue , Converter={StaticResource DoubleConverter}}"/>
+            <!--#endregion-->
+            <!--#region Квадратная миля -->
+            <Label 
+                   Text="{code:TranslateExtension SquareMileLabel } "/>
+            <Entry 
+                ReturnCommandParameter="MileValue"
+                
+                
+                Keyboard="Numeric" 
+                Focused="OnButtonFocused"
+                Text="{Binding MileValue , Converter={StaticResource DoubleConverter}}"/>
+            <!--#endregion-->
+            <!--#region Квадратный ярд (yd2)   -->
+            <Label 
+                   Text="{code:TranslateExtension SquareYardLabel } "/>
+            <Entry 
+                
+                ReturnCommandParameter="YardValue"
+                
+                
+                Keyboard="Numeric" 
+                Focused="OnButtonFocused"
+                Text="{Binding YardValue , Converter={StaticResource DoubleConverter}}"/>
+            <!--#endregion-->
+            <!--#region Квадратный фут (ft2)     -->
+            <Label 
+                   Text="{code:TranslateExtension SquareFtLabel } "/>
+            <Entry 
+                ReturnCommandParameter="FtValue"
+                
+                
+                Keyboard="Numeric" 
+                Focused="OnButtonFocused"
+                Text="{Binding FtValue , Converter={StaticResource DoubleConverter}}"/>
+            <!--#endregion-->
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
