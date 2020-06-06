@@ -141,4 +141,28 @@
   <data name="SpeedSeaMileLabel" xml:space="preserve">
     <value>Морских миль в час</value>
   </data>
+  <data name="SquareAcrLabel" xml:space="preserve">
+    <value>Акр</value>
+  </data>
+  <data name="SquareArLabel" xml:space="preserve">
+    <value>Ар «соток» (а)</value>
+  </data>
+  <data name="SquareFtLabel" xml:space="preserve">
+    <value>Квадратный фут (ft2)</value>
+  </data>
+  <data name="SquareGaLabel" xml:space="preserve">
+    <value>Гектар (га)</value>
+  </data>
+  <data name="SquareKmsLabel" xml:space="preserve">
+    <value>Квадратный километр (км2)</value>
+  </data>
+  <data name="SquareMileLabel" xml:space="preserve">
+    <value>Квадратная миля</value>
+  </data>
+  <data name="SquareMsLabel" xml:space="preserve">
+    <value>Квадратный метр (км2)</value>
+  </data>
+  <data name="SquareYardLabel" xml:space="preserve">
+    <value>Квадратный ярд (yd2)</value>
+  </data>
 </root>

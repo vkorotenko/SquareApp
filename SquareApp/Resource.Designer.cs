@@ -131,5 +131,77 @@ namespace SquareApp {
                 return ResourceManager.GetString("SpeedSeaMileLabel", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Акр.
+        /// </summary>
+        public static string SquareAcrLabel {
+            get {
+                return ResourceManager.GetString("SquareAcrLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ар «соток» (а).
+        /// </summary>
+        public static string SquareArLabel {
+            get {
+                return ResourceManager.GetString("SquareArLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Квадратный фут (ft2).
+        /// </summary>
+        public static string SquareFtLabel {
+            get {
+                return ResourceManager.GetString("SquareFtLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Гектар (га).
+        /// </summary>
+        public static string SquareGaLabel {
+            get {
+                return ResourceManager.GetString("SquareGaLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Квадратный километр (км2).
+        /// </summary>
+        public static string SquareKmsLabel {
+            get {
+                return ResourceManager.GetString("SquareKmsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Квадратная миля.
+        /// </summary>
+        public static string SquareMileLabel {
+            get {
+                return ResourceManager.GetString("SquareMileLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Квадратный метр (км2).
+        /// </summary>
+        public static string SquareMsLabel {
+            get {
+                return ResourceManager.GetString("SquareMsLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Квадратный ярд (yd2).
+        /// </summary>
+        public static string SquareYardLabel {
+            get {
+                return ResourceManager.GetString("SquareYardLabel", resourceCulture);
+            }
+        }
     }
 }
