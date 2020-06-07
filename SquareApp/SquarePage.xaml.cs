@@ -38,12 +38,20 @@ namespace SquareApp
              */
 
             double Ms2Km() => MsValue / 1000000;
+            double Km2Ms() => KmValue * 1000000;
             double Ms2Acr() => MsValue / 4046.86;
+            double Acr2Ms() => AcrValue * 4046.86;
             double Ms2Ga() => MsValue / 10000;
+            double Ga2Ms() => GaValue * 10000;
             double Ms2Ar() => MsValue / 100;
+            double Ar2Ms() => ArValue * 100;
             double Km2Mile() => KmValue / 2.58999;
+            double Mile2Km() => MileValue * 2.58999;
             double Ms2Yards() => MsValue * 1.19599;
+            double Yr2Ms() => YardValue / 1.19599;
             double Ms2Ft() => MsValue * 10.7639;
+            double Ft2Ms() => FtValue / 10.7639;
+
             #region MsValue
             private double _ms = InitialMs;
 
@@ -71,8 +79,20 @@ namespace SquareApp
             public double KmValue
             {
                 get => _km;
-                set => SetProperty(ref _km, value);
+                set
+                {
+                    SetProperty(ref _km, value);
+                    if (ActiveButton != nameof(KmValue)) return;
+                    MsValue = Km2Ms();
+                    ArValue = Ms2Ar();
+                    GaValue = Ms2Ga();
+                    AcrValue = Ms2Acr();
+                    MileValue = Km2Mile();
+                    YardValue = Ms2Yards();
+                    FtValue = Ms2Ft();
+                }
             }
+
             #endregion
             #region ArValue
             private double _arValue;
@@ -80,8 +100,21 @@ namespace SquareApp
             public double ArValue
             {
                 get => _arValue;
-                set => SetProperty(ref _arValue, value);
+                set
+                {
+                    SetProperty(ref _arValue, value);
+                    if (ActiveButton != nameof(ArValue)) return;
+                    MsValue = Ar2Ms();
+                    KmValue = Ms2Km();
+                    // ArValue = Ms2Ar();
+                    GaValue = Ms2Ga();
+                    AcrValue = Ms2Acr();
+                    MileValue = Km2Mile();
+                    YardValue = Ms2Yards();
+                    FtValue = Ms2Ft();
+                }
             }
+
             #endregion
             #region GaValue
             private double _gaValue;
@@ -89,8 +122,21 @@ namespace SquareApp
             public double GaValue
             {
                 get => _gaValue;
-                set => SetProperty(ref _gaValue, value);
+                set
+                {
+                    SetProperty(ref _gaValue, value);
+                    if (ActiveButton != nameof(GaValue)) return;
+                    MsValue = Ga2Ms();
+                    KmValue = Ms2Km();
+                    ArValue = Ms2Ar();
+                    // GaValue = Ms2Ga();
+                    AcrValue = Ms2Acr();
+                    MileValue = Km2Mile();
+                    YardValue = Ms2Yards();
+                    FtValue = Ms2Ft();
+                }
             }
+
             #endregion
             #region AcrValue
             private double _acrValue;
@@ -98,8 +144,21 @@ namespace SquareApp
             public double AcrValue
             {
                 get => _acrValue;
-                set => SetProperty(ref _acrValue, value);
+                set
+                {
+                    SetProperty(ref _acrValue, value);
+                    if (ActiveButton != nameof(AcrValue)) return;
+                    MsValue = Acr2Ms();
+                    KmValue = Ms2Km();
+                    ArValue = Ms2Ar();
+                    GaValue = Ms2Ga();
+                    // AcrValue = Ms2Acr();
+                    MileValue = Km2Mile();
+                    YardValue = Ms2Yards();
+                    FtValue = Ms2Ft();
+                }
             }
+
             #endregion
             #region MileValue
             private double _mileValue;
@@ -107,8 +166,22 @@ namespace SquareApp
             public double MileValue
             {
                 get => _mileValue;
-                set => SetProperty(ref _mileValue, value);
+                set
+                {
+                    SetProperty(ref _mileValue, value);
+                    if (ActiveButton != nameof(MileValue)) return;
+
+                    KmValue = Mile2Km();
+                    MsValue = Km2Ms();
+                    ArValue = Ms2Ar();
+                    GaValue = Ms2Ga();
+                    AcrValue = Ms2Acr();
+                    // MileValue = Km2Mile();
+                    YardValue = Ms2Yards();
+                    FtValue = Ms2Ft();
+                }
             }
+
             #endregion
             #region YardValue
             private double _yardValue;
@@ -116,8 +189,22 @@ namespace SquareApp
             public double YardValue
             {
                 get => _yardValue;
-                set => SetProperty(ref _yardValue, value);
+                set
+                {
+                    SetProperty(ref _yardValue, value);
+                    if (ActiveButton != nameof(YardValue)) return;
+
+                    MsValue = Yr2Ms();
+                    KmValue = Ms2Km();
+                    ArValue = Ms2Ar();
+                    GaValue = Ms2Ga();
+                    AcrValue = Ms2Acr();
+                    MileValue = Km2Mile();
+                    // YardValue = Ms2Yards();
+                    FtValue = Ms2Ft();
+                }
             }
+
             #endregion
             #region FtValue
             private double _ftValue;
@@ -125,8 +212,22 @@ namespace SquareApp
             public double FtValue
             {
                 get => _ftValue;
-                set => SetProperty(ref _ftValue, value);
+                set
+                {
+                    SetProperty(ref _ftValue, value);
+                    if (ActiveButton != nameof(FtValue)) return;
+
+                    MsValue = Ft2Ms();
+                    KmValue = Ms2Km();
+                    ArValue = Ms2Ar();
+                    GaValue = Ms2Ga();
+                    AcrValue = Ms2Acr();
+                    MileValue = Km2Mile();
+                    YardValue = Ms2Yards();
+                    // FtValue = Ms2Ft();
+                }
             }
+
             #endregion
 
             #endregion
